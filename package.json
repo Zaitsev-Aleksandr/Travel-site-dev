@@ -29,7 +29,7 @@
     "gulp-watch": "^5.0.1"
   },
   "dependencies": {
-    "acorn": "^6.1.1",
+    "acorn": "^6.4.1",
     "datatables.net": "^1.10.19",
     "datatables.net-autofill-bs4": "^2.3.3",
     "datatables.net-bs4": "^1.10.19",
