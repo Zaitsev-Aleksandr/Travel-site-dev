@@ -1,0 +1,39 @@
+
+body {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header {
+  @include propsSize(height, 90, 120);
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.04);
+  background: #FFFFFF;
+  z-index: 10;
+}
+
+main {
+  @include propsSize(padding, 20, 30);
+  width: 100%;
+  flex: 1 1 auto;
+  background: #f8f8f9;
+  article{
+    height: 100%;
+    width: max-content;
+  }
+  section{
+    background: #FFFFFF;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.04);
+    border-radius: 5px;
+    @include indentation(padding,(30,15), (25,40));
+    }
+}
+
+footer {
+  @include propsSize(height, 78, 102);
+  width: 100%;
+  background: #eeeef1;
+}

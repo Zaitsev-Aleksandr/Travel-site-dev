@@ -1,0 +1,96 @@
+.common-modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  @extend %flexRowCenterCenter;
+  width: 100vw;
+  height: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -2;
+  opacity: 0;
+  transition: opacity 0.3s, height 0s 0.3s, z-index 0s 0.3s;
+
+
+
+  .common-modal-content {
+    @extend %flexColumnCenterCenter;
+    @include propsSize(width, 520, 710);
+    height: 0;
+    background: #FFFFFF;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.04);
+    border-radius: 5px;
+    transition: opacity 0.3s, height 0.3s;
+
+    .modal-header {
+      @include indentation(padding, (0), (35,50));
+      @extend  %flexRowBetweenCenter;
+      @include propsSize(height, 65, 71);
+      font-family: Circular Std, sans-serif;
+      font-style: normal;
+      font-weight: 600;
+
+      width: 100%;
+      border-bottom: 1px solid #E9EDF3;
+      box-sizing: border-box;
+      .button-close-modal{
+        width: 30px;
+        height: 30px;
+        background: transparent;
+        @extend %flexRowEndCenter;
+        svg{
+          color: #C6CAD9;
+          cursor: pointer;
+
+        }
+
+    }
+    }
+
+    .modal-body {
+      @include indentation(padding, (10, 20), (16, 35));
+      width: 100%;
+      flex: 1 1 auto;
+
+      .common-style-form-group {
+        position: relative;
+
+        #sandbox-container {
+          cursor: pointer;
+        }
+
+        .fa-calendar-alt {
+          color: #BDC0CC;
+          position: absolute;
+          right: 12px;
+          top: 30%;
+        }
+      }
+    }
+
+    .modal-footer {
+      @extend %flexRowCenterCenter;
+      @include font(16);
+      @include propsSize(height, 45, 50);
+     cursor: pointer;
+      width: 100%;
+      background: #61DBB4;
+      font-family: Circular Std, sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      color: #FFFFFF;
+    }
+  }
+  &.active{
+    opacity: 1;
+    height: 100vh;
+    z-index: 2500;
+    transition: opacity 0.3s, height 0s;
+    .common-modal-content{
+      opacity: 1;
+      @include propsSize(height, 380,432 );
+      transition: opacity 0.3s, height 0.3s;
+
+    }
+  }
+}

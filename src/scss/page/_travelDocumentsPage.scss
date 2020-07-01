@@ -1,0 +1,109 @@
+.first-some-info__block {
+  height: 70%;
+  @include propsSize(margin-bottom, 10, 20);
+  @include propsSize(width, 220, 410);
+}
+
+.second-some-info__block {
+  @include propsSize(width, 220, 410);
+  height: 20%;
+}
+
+.common-tab-wrapper {
+  @include propsSize(width, 520, 710);
+  @include indentation(margin, (0), (20, 30));
+  min-height: 55%;
+
+  .tab-nav-menu {
+    @include indentation(padding, (0), (5, 10));
+    @include propsSize(height, 55, 71);
+    @include font(16);
+    border-bottom: 1px solid #E9EDF3;
+    box-sizing: border-box;
+    font-family: Circular Std, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #B0B3C2;
+
+    .tab-nav__item {
+      @extend %flexRowCenterCenter;
+      @include indentation(margin, (0), (3, 5));
+      cursor: pointer;
+      flex: 1 1 auto;
+      height: 100%;
+      border-bottom: 2px solid transparent;
+      margin: 0;
+
+      .tab-nav__item-link {
+        @extend %flexRowCenterCenter;
+        text-decoration: none;
+        height: 100%;
+        color: #B0B3C2;
+      }
+
+      &.active, &:hover {
+        border-color: #61DBB4;
+
+        .tab-nav__item-link {
+          color: black;
+        }
+      }
+    }
+
+  }
+
+  .passport-info-block {
+
+    .passport-info__item {
+      @include propsSize(width, 150, 196);
+      @include propsSize(height, 70, 100);
+      @include indentation(padding,(13,20), ( 18, 25));
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid #E3E7ED;
+      box-sizing: border-box;
+      border-radius: 4px;
+
+      &.add {
+        border: 1px dashed #D7D8E0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        @extend %fontStyleRoboto;
+        @include font(13);
+        letter-spacing: 0.03em;
+        color: #B0B3C2;
+        cursor: pointer;
+      }
+
+      &-country {
+        @extend %fontStyleRoboto;
+        @include font(14);
+        letter-spacing: 0.03em;
+        color: #292949;
+
+        img {
+          @include propsSize(margin-right, 10, 15);
+        }
+      }
+
+      &-identifier {
+        @extend %flexRowBetweenCenter;
+        @extend %fontStyleRoboto;
+        @include font(14);
+        letter-spacing: 0.03em;
+        color: #7B819A;
+
+        &-date {
+          @include font(12);
+          color: #B0B3C2;
+        }
+      }
+
+    }
+  }
+
+
+}

@@ -1,0 +1,102 @@
+
+
+/*_______________________________________________*/
+@keyframes open-statistics {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 290px;
+  }
+}
+
+
+@keyframes close-statistics {
+  0% {
+    height: 290px;
+  }
+  100% {
+    height: 0;
+  }
+}
+.statistics-field {
+  height: 0;
+  overflow: hidden;
+}
+.open-statistics {
+  animation: open-statistics 0.5s linear forwards;
+}
+
+.close-statistics {
+  animation: close-statistics 0.5s linear forwards;
+}
+
+/*_______________________________________________*/
+
+@keyframes open-modal {
+  0% {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+
+
+@keyframes close-modal {
+  0% {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+
+.open-modal {
+  animation: open-modal linear;
+  animation-duration:0.7s;
+}
+
+.close-modal {
+  animation: close-modal linear;
+  animation-duration:0.7s;
+}
+@keyframes open-modal-content {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  50% {
+    opacity: 0.2;
+
+  }
+  100% {
+    opacity: 1;
+    width: 75% !important;
+  }
+}
+
+@keyframes close-modal-content {
+  0% {
+    opacity: 1;
+    width: 75%;
+  }
+  50% {
+    opacity: 0.2;
+
+  }
+  100% {
+    opacity: 0;
+    width: 0;
+  }
+}
+
+.open-modal-content {
+  animation: open-modal-content 0.6s ease-out;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.close-modal-content {
+  animation: close-modal-content 0.6s ease-out;
+}

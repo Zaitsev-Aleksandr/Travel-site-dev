@@ -1,0 +1,25 @@
+@import "additions/reset";
+@import "additions/_scssRules.scss";
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import "librares/bootstrap/bootstrap";
+@import "librares/fontawesome/fontawesome";
+@import "librares/bootstrap-multiselect";
+@import "librares/summernote/summernote-bs4";
+
+
+body {
+  .remove-elem-icon {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    cursor: pointer;
+  }
+}
+
+@import "common";
+@import "additions/animation";
+@import "page/travelDocumentsPage";
+@import "modalWidows/addNewPassportModalWindow";
+@import "page/travelPreferences";
+
+
