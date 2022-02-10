@@ -50,7 +50,7 @@
     "highcharts": "^7.1.2",
     "jquery": "^3.4.1",
     "jszip": "^3.2.1",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "pdfmake": "^0.1.56",
     "react": "^16.11.0",
     "react-dom": "^16.11.0"
